@@ -1,4 +1,5 @@
-import { Providers } from '@component/store/Providers';
+import { Provider} from 'react-redux'
+import store from '@component/store/store'
 import './globals.css'
 import { Inter } from 'next/font/google'
 
@@ -15,9 +16,9 @@ export default function RootLayout({ children }) {
     
       <html lang="en">
         <body >
-        <Providers>
+        <Provider store= {store}>
         {children}
-        </Providers>
+        </Provider>
           </body>
 
       </html>
